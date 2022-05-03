@@ -16,6 +16,17 @@ namespace MensajeroModel.DAL
 
         }
 
+        private static MensajesDALArchivos instancia;
+
+        public static IMensajesDAL GetInstancia()
+        {
+            if (instancia == null)
+            {
+                instancia = new MensajesDALArchivos();
+            }
+            return instancia;
+        }
+
         private static string url = Directory.GetCurrentDirectory();
         private static string archivo = url + "/mensajes.txt";
 
