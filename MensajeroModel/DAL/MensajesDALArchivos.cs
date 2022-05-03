@@ -20,7 +20,6 @@ namespace MensajeroModel.DAL
         {
 
         }
-
         //2. Debe poseer un atributo del mismo tipo de la clase y estatico
         private static MensajesDALArchivos instancia;
         //3. Tener un metodo GetInstance, que devuelve una referencia al atributo
