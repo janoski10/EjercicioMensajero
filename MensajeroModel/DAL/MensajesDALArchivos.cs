@@ -10,14 +10,20 @@ namespace MensajeroModel.DAL
 {
     class MensajesDALArchivos
     {
-        //Singleton
+        //para implementar un patron singleton
+
+        // Singleton es un patron de diseño del tipo creacional cuyo proposito es garantizar la 
+        // existencia de una sola instancia de una clase. Ademas el acceso a esa unica instancia tiene que ser global.
+         
+        //1. El contructor tiene que ser private
         private MensajesDALArchivos()
         {
 
         }
 
+        //2. Debe poseer un atributo del mismo tipo de la clase y estatico
         private static MensajesDALArchivos instancia;
-
+        //3. Tener un metodo GetInstance, que devuelve una referencia al atributo
         public static IMensajesDAL GetInstancia()
         {
             if (instancia == null)
