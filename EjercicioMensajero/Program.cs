@@ -1,9 +1,14 @@
-﻿using MensajeroModel.DAL;
+﻿using EjercicioMensajero.Comunicacion;
+using MensajeroModel.DAL;
 using MensajeroModel.DTO;
+using ServidorSocketUtils;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
+using System.Net.Sockets;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace EjercicioMensajero
@@ -32,6 +37,9 @@ namespace EjercicioMensajero
         }
         static void Main(string[] args)
         {
+            HebraServidor hebra = new HebraServidor();
+            Thread t = new Thread(new ThreadStart(hebra.Ejecutar));
+            t.Start();
             while (Menu()) ;
         }
         

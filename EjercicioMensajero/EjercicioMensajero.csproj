@@ -33,6 +33,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -42,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Comunicacion\HebraServidor.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -49,6 +51,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\EjercicioSocket\ServidorSocketUtils\ServidorSocketUtils.csproj">
+      <Project>{1c22005f-a36f-4558-8be8-85e4692d375b}</Project>
+      <Name>ServidorSocketUtils</Name>
+    </ProjectReference>
     <ProjectReference Include="..\MensajeroModel\MensajeroModel.csproj">
       <Project>{81CABEE8-46D3-4DAC-892C-F05E9F341C4E}</Project>
       <Name>MensajeroModel</Name>
