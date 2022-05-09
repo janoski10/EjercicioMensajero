@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace MensajeroModel.DAL
 {
-    class MensajesDALArchivos
+    public class MensajesDALArchivos : IMensajesDAL
     {
         //para implementar un patron singleton
 
@@ -81,5 +81,9 @@ namespace MensajeroModel.DAL
             }
             return lista;
         }
+
+        
+
+        
     }
 }
